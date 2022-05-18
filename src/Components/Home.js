@@ -7,7 +7,8 @@ export const Home = () => {
     fetch('Todo.json').then(res=>res.json()).then(data=>setTodos(data))
   },[])
   return (
-    <div>
+    <div style={{height: "100vh"}} className='d-flex justify-content-center align-items-center bg-light flex-column'>
+      <h1 className='text-center fw-bold mb-5'>To-Do App</h1>
       <Todos todos={todos}/>
     </div>
   )
